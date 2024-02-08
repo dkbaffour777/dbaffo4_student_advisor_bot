@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+    <category>
+        <pattern>*</pattern>
+        <template>
+            Sorry I cannot help you with that :( <br/>
+            <button><text>Click here to restart the program</text><postback>HELLO</postback></button>
+        </template>
+    </category>
+    <category>
+      <pattern>HELLO</pattern>
+      <template>
+        Hi there! I'm your career advisor chatbot. What's your first name? 
+        (For best results, reply with "My name is...")
+      </template>
+    </category>
+    
+    <category>
+      <pattern>MY NAME IS *</pattern>
+      <template>
+        Nice to meet you, <star/>. I can help you decide which computing job would be the
+        right fit for you based on your interests in computer science. Would you like to continue?
+      </template>
+    </category>
+    
+    <category>
+      <pattern>NO</pattern>
+      <template>
+        Okay, let me know when you change your mind. Thanks!
+      </template>
+    </category>
+    
+    <category>
+      <pattern>YES</pattern>
+      <template>
+        Please select your area of interest:
+        <button><text>1. Programming and Development</text><postback>PROGRAMMING AND DEVELOPMENT</postback></button>
+        <button><text>2. Security and Networking</text><postback>SECURITY AND NETWORKING</postback></button>
+        <button><text>3. Data and Analytics</text><postback>DATA AND ANALYTICS</postback></button>
+      </template>
+    </category>
+    
+    <category>
+      <pattern>PROGRAMMING AND DEVELOPMENT</pattern>
+      <template>
+        Based on your interest in Programming and Development, you should consider roles like Software Engineer and AI/Machine Learning Engineer.
+        You can learn more about these roles: <br/>
+        <a href="https://www.thinkful.com/blog/software-engineer-career-path/">Software Engineer</a> 
+        <a href="https://www.projectpro.io/article/machine-learning-engineer-career-path/537">AI/Machine Learning Engineer</a>
+      </template>
+    </category>
+    
+    <category>
+      <pattern>SECURITY AND NETWORKING</pattern>
+      <template>
+        If you're interested in Security and Networking, roles such as Cybersecurity Analyst and Network Engineer might be a good fit.
+        Explore more about these roles: <br/>
+        <a href="https://www.cybersecurityeducation.org/careers/security-analyst/">Cybersecurity Analyst</a>
+        <a href="https://www.dice.com/career-advice/network-engineer-career-path-what-you-need-to-know">Network Engineer</a>
+      </template>
+    </category>
+    
+    <category>
+      <pattern>DATA AND ANALYTICS</pattern>
+      <template>
+        You would want to consider the Data Scientist role for an interest in Data and Analytics.
+        Learn more about this role: <a href="https://www.theforage.com/blog/careers/data-scientist-career-path">Data Scientist</a>
+      </template>
+    </category>
+
+</aiml>
